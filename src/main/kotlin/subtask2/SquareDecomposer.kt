@@ -1,7 +1,6 @@
 package subtask2
 
 class SquareDecomposer {
-
     fun decomposeNumber(number: Int): Array<Int>? {
         if (number < 0) return null
         val numberLong = number.toLong()
@@ -27,13 +26,13 @@ class SquareDecomposer {
                     list = list.subList(0, 1)
                 } else {
                     ++shift
+                    if(list[shift] > 67) ++shift
                     temp = list[shift] - 1
                     list = list.subList(0, shift)
                 }
             }
         }
         list.reverse()
-        println(list)
         return if (list.isNotEmpty()) list.map { it.toInt() }.toTypedArray() else null
 
     }

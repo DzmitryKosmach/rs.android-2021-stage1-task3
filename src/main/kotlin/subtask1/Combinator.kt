@@ -11,7 +11,6 @@ class Combinator {
             if ( combinations > n) return null
             val countCombinations = getCombinations(n, combinations)
             if ( countCombinations == m) return combinations
-
         }
     }
 
